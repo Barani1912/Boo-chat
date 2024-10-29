@@ -20,7 +20,7 @@ const signup = async(req,res)=>{
         }
 
         //password hashing
-        const salt = await bcrypt.genSalt(10);
+        const salt = await bcrypt.genSalt(10);// increase in num will increase the process time...
         const hashedPassword = await bcrypt.hash(password,salt)
 
         // Profile Picture
