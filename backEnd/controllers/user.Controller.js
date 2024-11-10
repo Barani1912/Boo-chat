@@ -1,7 +1,7 @@
 
 import User from "../models/user.Model.js";
 
-const getUsersForSideBar = async (req, res) => {
+export const getUsersForSideBar = async (req, res) => {
   try {
     const loggedInUserId = req.user._id;
 
@@ -19,7 +19,6 @@ const getUsersForSideBar = async (req, res) => {
   }
 };
 
-export default getUsersForSideBar;
 
 
 
