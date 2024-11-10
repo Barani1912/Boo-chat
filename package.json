@@ -8,7 +8,7 @@
     "start": "node backEnd/server.js",
 		 "build": "npm install && npm install --prefix frontEnd && npm run build --prefix frontEnd"
   },
-
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
