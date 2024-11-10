@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import useGetMessage from "../../hooks/useGetMessage"
 import Message from "./Message"
+import useListenMessage from "../../hooks/useListenMessage";
 
 const Messages = () => {
   const{messages} = useGetMessage();
+  useListenMessage()
   const lastMessageRef = useRef();
 
   useEffect(()=>{

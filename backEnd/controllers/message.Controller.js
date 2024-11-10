@@ -1,5 +1,8 @@
 const Conversation = require("../models/converstion.Model");
 const Message = require("../models/message.Model");
+const { getReceiverSocketId, io } = require("../socket/socket");
+// const io = require("socket.io-client")
+
 
 const sendMessage = async(req,res)=>{
     try {
@@ -27,21 +30,27 @@ const sendMessage = async(req,res)=>{
             conversation.messages.push(newMessage._id);
         }
 
-
-        // SOCKET IO FUNTIONALITY...
-
-
-
-
-
-    // this will run line by line...
+        // this will run line by line...
 
         // await conversation.save();
         // await newMessage.save();
         // 1:24:00-yt
-       
-    // this will run in parallel...
+        
+        // this will run in parallel...
         await Promise.all([conversation.save(), newMessage.save()]);
+
+        // SOCKET IO FUNTIONALITY...
+        // 4:16:00-yt
+
+        const receiverSocketId = getReceiverSocketId(receiverId);
+        if(receiverSocketId){
+            //  io.to().emit()--> send to a specific person only
+            io.to(receiverSocketId).emit("newMessage",newMessage)
+        }
+
+
+
+
         
         res.status(201).json(newMessage);
 
