@@ -1,7 +1,7 @@
 //1:38:00 -> backend part1 ends here...
-
-const path = require("path") ; 
+ 
 const express = require("express");
+const path = require("path") ;
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 
