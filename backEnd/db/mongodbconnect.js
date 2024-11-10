@@ -4,8 +4,8 @@ import mongoose from "mongoose";
 
 const connectToMongoDb = async () => {
     try {
-        // await mongoose.connect('mongodb://localhost:27017/boo-chat');
-        await mongoose.connect(process.env.MONGO_DB_URI);
+        await mongoose.connect('mongodb://localhost:27017/boo-chat');
+        // await mongoose.connect(process.env.MONGO_DB_URI);
         console.log("Connected to MongoDB");
         const db = mongoose.connection;
         db.once('open', () => {
