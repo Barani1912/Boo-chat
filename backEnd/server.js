@@ -15,7 +15,7 @@ const {app,server} = require("./socket/socket.js")
 
 dotenv.config();
 
-// const __dirname = path.resolve();
+const __dirname = path.resolve();
 //In CommonJS, __dirname is automatically available, so there's no need to redefine it
 
 // const app = express();
@@ -29,10 +29,10 @@ app.use("/api/auth",authRoutes)
 app.use("/api/message",messageRoutes)
 app.use("/api/users",userRoutes)
 
-app.use(express.static(path.join(__dirname, "frontEnd/dist")));
+app.use(express.static(path.join(__dirname,"/frontEnd/dist")));
 
 app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "frontEnd","dist","index.html"));
+	res.sendFile(path.join(__dirname,"frontEnd","dist","index.html"));
 });
 
 server.listen(PORT,()=>{
