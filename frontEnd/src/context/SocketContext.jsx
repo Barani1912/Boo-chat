@@ -16,6 +16,7 @@ export const SocketContextProvider = ({children})=>{
 
     useEffect(() =>{
         if(authUser){
+            // the deployment link
             const socket = io("https://boo-chat.onrender.com",{
                 query:{
                     userId:authUser._id,
