@@ -16,7 +16,6 @@ const Message = ({message}) => {
 
   return (
 
-    // should be changed dynamic....
     <div className={`chat ${chatClassName}`}>
         <div className="chat-image avatar">
             <div className="w-10 rounded-full">

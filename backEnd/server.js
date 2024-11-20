@@ -19,7 +19,7 @@ const __dirname = path.resolve();
 const PORT = process.env.PORT || 5000;
 // process.env.PORT ...it wont work without importing and cofiguring...
 
-app.use(express.json());
+app.use(express.json()); //parse incoming JSON payloads
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);

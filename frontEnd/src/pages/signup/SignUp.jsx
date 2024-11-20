@@ -35,14 +35,14 @@ const SignUp = () => {
             <label className="label">
               <span className="text-base label-text">Full Name</span>
             </label>
-            <input type="text" placeholder="Ex: Barani Vignesh" className="w-full input input-bordered h-10" value={input.fullName} onChange={(event)=>setInput({...input,fullName:event.target.value})}/>
+            <input type="text" placeholder="Barani Vignesh" className="w-full input input-bordered h-10" value={input.fullName} onChange={(event)=>setInput({...input,fullName:event.target.value})}/>
           </div>
 
           <div>
             <label className="label">
               <span className="text-base label-text">Username</span>
             </label>
-            <input type="text" placeholder="Ex: baranivignesh" className="w-full input input-bordered h-10" value={input.username} onChange={(event)=>setInput({...input,username:event.target.value})}/>
+            <input type="text" placeholder="baranivignesh" className="w-full input input-bordered h-10" value={input.username} onChange={(event)=>setInput({...input,username:event.target.value})}/>
           </div>
 
           <div>
@@ -71,7 +71,7 @@ const SignUp = () => {
           </div>
 
           <span className='text-slate-300'>Already have an account?
-            <Link to="/login" className="text-sm font-semibold text-white ">Login</Link>
+            <Link to="/login" className="text-sm font-semibold text-white hover:text-white">Login</Link>
           </span>
           
         </form>

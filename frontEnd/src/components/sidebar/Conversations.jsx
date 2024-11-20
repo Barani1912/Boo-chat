@@ -7,7 +7,7 @@ const Conversations = () => {
   // console.log("Conversations:",conversation)
 
   return (
-    <div className="py-2 flex flex-col overflow-auto">
+    <div className="scroll-container py-2 flex flex-col overflow-auto">
 
       {conversation.map((conversation,idx) =>(
         <Conversation

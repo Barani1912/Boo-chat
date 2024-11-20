@@ -8,7 +8,7 @@ export const getUsersForSideBar = async (req, res) => {
     // const allUser = await User.find()
 
     // shows users except ourself...
-    // .select("-password") -> remove the password from the obj array..
+    // .select("-password") -> remove the password from the array of obj..
     const filteredUsers = await User.find({ _id: { $ne: loggedInUserId } }).select("-password");
 
     res.status(200).json(filteredUsers);

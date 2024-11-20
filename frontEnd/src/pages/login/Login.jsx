@@ -26,14 +26,14 @@ const Login = () => {
           <div>
 {/* daisy ui comp.... */}
             <label className="label">
-              <span className="text-base label-text">Username</span>
+              <span className="text-base label-text text-slate-300">Username</span>
             </label>
             <input type="text" placeholder="Enter username" className="w-full input input-bordered h-10" value={username} onChange={(e)=>setUsername(e.target.value)}/>
           </div>
 
           <div>
           <label className="label">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-slate-300">Password</span>
             </label>
             <input type="text" placeholder="Enter password " className="w-full input input-bordered h-10" value={password} onChange={(e)=>setPassword(e.target.value)}/>
           </div>
@@ -44,7 +44,7 @@ const Login = () => {
             </button>
           </div>
 
-         <span>Don't have an account?<Link to="/signup" className="text-sm hover:text-white mt-2 inline-block">Signup</Link></span>
+         <span className="text-slate-300">Don't have an account?<Link to="/signup" className="text-sm font-semibold text-slate-300 hover:text-white mt-2 inline-block">Signup</Link></span>
           
         </form>
       </div>
@@ -53,9 +53,4 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
-
 

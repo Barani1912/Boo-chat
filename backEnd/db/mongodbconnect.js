@@ -1,6 +1,4 @@
-
 import mongoose from "mongoose";
-// const dotenv = require("dotenv");
 
 const connectToMongoDb = async () => {
     try {
